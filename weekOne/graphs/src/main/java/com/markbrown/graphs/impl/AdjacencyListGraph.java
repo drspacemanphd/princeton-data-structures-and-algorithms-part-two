@@ -22,7 +22,7 @@ public class AdjacencyListGraph {
         edges++;
     }
 
-    public boolean connected(int vOne, int vTwo) {
+    public boolean edge(int vOne, int vTwo) {
         return verticesList[vOne].contains(vTwo);
     }
 

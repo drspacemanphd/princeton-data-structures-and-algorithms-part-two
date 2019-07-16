@@ -21,7 +21,7 @@ public class AdjacencyMatrixGraph {
         edges++;
     }
     
-    public boolean connected(int vOne, int vTwo) {
+    public boolean edge(int vOne, int vTwo) {
         return matrix[vOne][vTwo] == 1 && matrix[vTwo][vOne] == 1;
     }
 

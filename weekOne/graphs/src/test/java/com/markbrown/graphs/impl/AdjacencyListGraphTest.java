@@ -29,17 +29,17 @@ public class AdjacencyListGraphTest {
 
         assertEquals(graph.V(), 4, 0);
         assertEquals(graph.E(), 4, 0);
-        assertTrue(graph.connected(0, 1));
-        assertTrue(graph.connected(1, 0));
-        assertTrue(graph.connected(0, 3));
-        assertTrue(graph.connected(3, 0));
-        assertTrue(graph.connected(1, 2));
-        assertTrue(graph.connected(2, 1));
-        assertTrue(graph.connected(1, 3));
-        assertTrue(graph.connected(3, 1));
+        assertTrue(graph.edge(0, 1));
+        assertTrue(graph.edge(1, 0));
+        assertTrue(graph.edge(0, 3));
+        assertTrue(graph.edge(3, 0));
+        assertTrue(graph.edge(1, 2));
+        assertTrue(graph.edge(2, 1));
+        assertTrue(graph.edge(1, 3));
+        assertTrue(graph.edge(3, 1));
 
-        assertFalse(graph.connected(0, 2));
-        assertFalse(graph.connected(2, 0));
+        assertFalse(graph.edge(0, 2));
+        assertFalse(graph.edge(2, 0));
 
         Iterator<Integer> iter = graph.adjacencyList(0);
         List<Integer> list = new ArrayList<>();
