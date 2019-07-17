@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-public class AdjacencyListGraph {
+public class AdjacencyListGraph implements Graph {
 
     private Set<Integer>[] verticesList;
     private int edges;

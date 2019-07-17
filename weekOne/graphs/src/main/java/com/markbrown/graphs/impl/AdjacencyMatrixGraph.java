@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
-public class AdjacencyMatrixGraph {
+public class AdjacencyMatrixGraph implements Graph {
 
     private int[][] matrix;
     private int edges;
@@ -34,7 +34,7 @@ public class AdjacencyMatrixGraph {
     }
 
     public Iterator<Integer> adjacencyList(int v) {
-        
+
         List<Integer> list = new ArrayList<>();
 
         for (int i = 0; i < matrix[v].length; i++) {
