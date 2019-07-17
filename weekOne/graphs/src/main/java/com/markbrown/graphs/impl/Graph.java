@@ -1,4 +1,6 @@
-package markbrown.graphs.impl;
+package com.markbrown.graphs.impl;
+
+import java.util.Iterator;
 
 public interface Graph {
 
