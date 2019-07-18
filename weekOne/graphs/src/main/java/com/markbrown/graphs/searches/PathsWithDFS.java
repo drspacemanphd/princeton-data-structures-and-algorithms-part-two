@@ -14,6 +14,7 @@ public class PathsWithDFS implements Paths {
     private int start;
 
     public PathsWithDFS(Graph g, int v) {
+        if (v >= g.V()) throw new RuntimeException("Invalid starting vertex");
         start = v;
         marked = new boolean[g.V()];
         edgeTo = new int[g.V()];
@@ -44,6 +45,7 @@ public class PathsWithDFS implements Paths {
         for (int i = v; i != start; i = edgeTo[i]) {
             path.push(i);
         }
+        path.push(start);
         return path;
     }
 
