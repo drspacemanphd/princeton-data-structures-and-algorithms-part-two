@@ -53,13 +53,13 @@ public class DigraphTest {
         assertTrue(listTwo.contains(3));
         assertTrue(listTwo.contains(0));
 
-        digraph.reverse();
+        Digraph reverse = (Digraph) digraph.reverse();
 
-        List<Integer> listThree = (List<Integer>) digraph.adjacencyListAsIterable(1);
+        List<Integer> listThree = (List<Integer>) reverse.adjacencyListAsIterable(1);
         assertEquals(1, listThree.size());
         assertTrue(listThree.contains(0));
 
-        List<Integer> listFour = (List<Integer>) digraph.adjacencyListAsIterable(2);
+        List<Integer> listFour = (List<Integer>) reverse.adjacencyListAsIterable(2);
         assertEquals(2, listFour.size());
         assertTrue(listFour.contains(3));
         assertTrue(listFour.contains(4));
