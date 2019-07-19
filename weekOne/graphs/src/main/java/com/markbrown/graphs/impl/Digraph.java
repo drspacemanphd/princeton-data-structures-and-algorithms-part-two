@@ -2,7 +2,6 @@ package com.markbrown.graphs.impl;
 
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 
 public class Digraph implements Graph {
@@ -15,6 +14,11 @@ public class Digraph implements Graph {
         for (int i = 0; i < vertices; i++) {
             this.graph[i] = new ArrayList<>();
         }
+    }
+
+    private Digraph(List<Integer>[] graph, int edges) {
+        this.graph = graph;
+        this.edges = edges;
     }
 
     @Override
@@ -59,9 +63,7 @@ public class Digraph implements Graph {
             }
         }
 
-        this.graph = newGraph;
-
-        return this;
+        return new Digraph(newGraph, this.edges);
     }
 
 
