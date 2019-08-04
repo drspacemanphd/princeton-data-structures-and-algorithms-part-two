@@ -1,7 +1,6 @@
 package com.markbrown.mst.impl;
 
 import java.util.ArrayDeque;
-import java.util.List;
 import java.util.Queue;
 
 public class KruskalPQ {
@@ -59,7 +58,7 @@ class MinPQ<T extends Comparable<T>> {
     }
 
     private void swim(int v) {
-        while (((v - 1) / 2) >= 0 && arr[v].compareTo(arr[(v - 1) / 2]) < 0) {
+        while (v != 0 && ((v - 1) / 2) >= 0 && arr[v].compareTo(arr[(v - 1) / 2]) < 0) {
             T temp = arr[(v - 1) / 2];
             arr[(v - 1) / 2] = arr[v];
             arr[v] = temp;
