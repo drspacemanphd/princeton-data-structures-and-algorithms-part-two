@@ -3,14 +3,14 @@ package com.markbrown.shortest;
 public class IndexedMinPQ<K extends Comparable<K>> {
     
     private int[] queue;
-    private int[] pos;
+    private Integer[] pos;
     private K[] keys;
     private int currIndex;
     private int maxSize;
 
     public IndexedMinPQ(int maxSize) {
         this.queue = new int[maxSize];
-        this.pos = new int[maxSize];
+        this.pos = new Integer[maxSize];
         this.keys = (K[]) new Comparable[maxSize];
         this.maxSize = maxSize;
 
